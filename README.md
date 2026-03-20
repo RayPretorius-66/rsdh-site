@@ -1,2 +1,2 @@
 # rsdh-site
-RSDH site for mobile app deployment and documentation
+RSDH site for mobile app documentation
