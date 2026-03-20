@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Shared Experiences</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #f7f5f0;
+      --surface:   #ffffff;
+      --ink:       #1a1814;
+      --ink-muted: #6b6660;
+      --accent:    #2a6049;
+      --accent-lt: #e8f2ee;
+      --border:    #e2ddd6;
+      --rule:      #c8c2b8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--accent);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      padding: 6px 18px 6px 10px;
+      margin-bottom: 28px;
+    }
+
+    .app-badge svg {
+      width: 22px; height: 22px;
+      fill: rgba(255,255,255,0.9);
+    }
+
+    .app-badge span {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    header h1 em {
+      font-style: italic;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .effective {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Layout ── */
+    .wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── Jurisdiction strip ── */
+    .jurisdiction-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      padding: 28px 0 0;
+      margin-bottom: 40px;
+    }
+
+    .jurisdiction-strip .tag {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-lt);
+      border: 1px solid #b8d9cc;
+      border-radius: 4px;
+      padding: 4px 12px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+
+    .toc h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ink-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      gap: 6px;
+    }
+
+    .toc ol li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; }
+
+    .toc ol li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      min-width: 22px;
+    }
+
+    .toc ol li a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .toc ol li a:hover { text-decoration: underline; }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 24px;
+    }
+
+    section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--accent-lt);
+      border-radius: 4px;
+      padding: 2px 8px;
+    }
+
+    section p { margin-bottom: 14px; color: var(--ink); }
+    section p:last-child { margin-bottom: 0; }
+
+    section ul, section ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    section ul li, section ol li {
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    /* ── Callout boxes ── */
+    .callout {
+      border-left: 3px solid var(--accent);
+      background: var(--accent-lt);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+
+    .callout strong { font-weight: 500; color: var(--accent); }
+
+    .callout-neutral {
+      border-left-color: var(--rule);
+      background: var(--surface);
+    }
+
+    /* ── Rights table ── */
+    .rights-grid {
+      display: grid;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .right-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      align-items: start;
+    }
+
+    .right-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .right-desc {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-card a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-top: 12px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 560px) {
+      .right-row { grid-template-columns: 1fr; gap: 4px; }
+      .toc { padding: 20px; }
+      .contact-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-badge">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1 14H5a1 1 0 01-1-1V7h16v10a1 1 0 01-1 1zm-3-8H8a1 1 0 000 2h8a1 1 0 000-2zm-4 4H8a1 1 0 000 2h4a1 1 0 000-2z"/>
+    </svg>
+    <span>Shared Experiences</span>
+  </div>
+  <h1>Privacy <em>Policy</em></h1>
+  <p class="effective">Effective date: 19 March 2026</p>
+</header>
+
+<div class="wrapper">
+
+  <div class="jurisdiction-strip">
+    <span class="tag">UK GDPR</span>
+    <span class="tag">EU GDPR</span>
+    <span class="tag">Australian Privacy Act 1988</span>
+  </div>
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Information We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#storage">Data Storage &amp; Security</a></li>
+      <li><a href="#sharing">Sharing &amp; Disclosure</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#uk-gdpr">UK &amp; EU Residents</a></li>
+      <li><a href="#australia">Australian Residents</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section id="overview">
+    <h2><span class="section-num">01</span> Overview</h2>
+    <p>Shared Experiences ("the App") is an iOS application developed and operated by RSDH ("we", "us", or "our"). The App is designed to help you store, organise, and view travel documents such as reservations and itineraries.</p>
+    <p>We are committed to protecting your privacy. This Privacy Policy explains what information we collect, why we collect it, how it is stored, and what rights you have in relation to your information.</p>
+    <div class="callout">
+      <strong>In plain terms:</strong> The App does not collect or transmit personal data to our servers. Your travel documents remain on your device and, if you choose, within your personal iCloud account.
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section id="data-collected">
+    <h2><span class="section-num">02</span> Information We Collect</h2>
+
+    <p><strong>Information you provide</strong></p>
+    <p>The App allows you to store travel documents (such as booking confirmations, flight itineraries, and hotel reservations) that you choose to add. This content is stored locally on your device or synced to your personal iCloud account via Apple's CloudKit framework. We do not have access to this content.</p>
+
+    <p><strong>Account &amp; sign-in information</strong></p>
+    <p>If you choose to sign in using <strong>Sign in with Apple</strong>, Apple may share a name and email address with the App solely for the purpose of creating and identifying your account. This information is used only to authenticate you within the App and is not stored on our servers.</p>
+
+    <div class="callout callout-neutral">
+      We do <strong>not</strong> collect analytics data, advertising identifiers, location data, browsing history, or any other behavioural information.
+    </div>
+
+    <p><strong>Automatically collected information</strong></p>
+    <p>We do not use third-party analytics, advertising SDKs, or tracking technologies within the App. Apple may collect certain technical data as part of standard iOS operation and App Store distribution; this is governed by <a href="https://www.apple.com/legal/privacy/" style="color:var(--accent);">Apple's Privacy Policy</a>.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="how-we-use">
+    <h2><span class="section-num">03</span> How We Use Your Information</h2>
+    <p>The limited information described above is used solely to:</p>
+    <ul>
+      <li>Authenticate and identify your account within the App (sign-in data only);</li>
+      <li>Enable iCloud sync of your travel documents across your personal Apple devices;</li>
+      <li>Respond to support enquiries you initiate with us.</li>
+    </ul>
+    <p>We do not use your information for marketing, profiling, advertising, or any automated decision-making.</p>
+    <p>Where applicable under the UK GDPR or EU GDPR, our lawful basis for processing sign-in data is <strong>performance of a contract</strong> (Article 6(1)(b)) — specifically, to provide you access to the App's functionality.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="storage">
+    <h2><span class="section-num">04</span> Data Storage &amp; Security</h2>
+    <p>Your travel documents are stored:</p>
+    <ul>
+      <li><strong>On-device:</strong> locally within the App's sandboxed storage on your iPhone or iPad; or</li>
+      <li><strong>iCloud:</strong> within your personal Apple iCloud account via CloudKit, if you have iCloud enabled for the App.</li>
+    </ul>
+    <p>In both cases, your data is held within Apple's infrastructure and governed by Apple's security and privacy practices. We do not operate our own servers to store your travel documents.</p>
+    <p>We implement appropriate technical measures to protect any information we do handle (e.g. support correspondence) against unauthorised access, loss, or disclosure.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="sharing">
+    <h2><span class="section-num">05</span> Sharing &amp; Disclosure</h2>
+    <p>We do not sell, rent, or trade your personal information. We do not share your information with third parties except in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Apple Inc.</strong> — as your device manufacturer and iCloud provider, Apple processes data in accordance with their own privacy policy.</li>
+      <li><strong>Legal obligations</strong> — if required to do so by applicable law, court order, or governmental authority.</li>
+      <li><strong>Protection of rights</strong> — where necessary to protect the rights, property, or safety of our users or the public.</li>
+    </ul>
+  </section>
+
+  <!-- 6 -->
+  <section id="retention">
+    <h2><span class="section-num">06</span> Data Retention</h2>
+    <p>Your travel documents are retained on your device or in iCloud for as long as you choose to keep the App installed or maintain iCloud sync. You may delete individual documents or all data at any time from within the App, or by deleting the App from your device.</p>
+    <p>Any support correspondence (e.g. emails sent to <a href="/cdn-cgi/l/email-protection#02717772726d7076427071666a2c6c6776" style="color:var(--accent);"><span class="__cf_email__" data-cfemail="f2818782829d8086b28081969adc9c9786">[email&#160;protected]</span></a>) is retained for as long as necessary to resolve your enquiry and meet any legal obligations, after which it is securely deleted.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="your-rights">
+    <h2><span class="section-num">07</span> Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+
+    <div class="rights-grid">
+      <div class="right-row">
+        <span class="right-label">Right of Access</span>
+        <span class="right-desc">Request a copy of the personal information we hold about you.</span>
+      </div>
+      <div class="right-row">
+        <span class="right-label">Right to Rectification</span>
+        <span class="right-desc">Request correction of inaccurate or incomplete information.</span>
+      </div>
+      <div class="right-row">
+        <span class="right-label">Right to Erasure</span>
+        <span class="right-desc">Request deletion of your personal information where there is no legitimate reason for us to continue holding it.</span>
+      </div>
+      <div class="right-row">
+        <span class="right-label">Right to Object</span>
+        <span class="right-desc">Object to processing of your personal information in certain circumstances.</span>
+      </div>
+      <div class="right-row">
+        <span class="right-label">Right to Portability</span>
+        <span class="right-desc">Request transfer of your information to you or a third party in a structured, machine-readable format.</span>
+      </div>
+      <div class="right-row">
+        <span class="right-label">Right to Withdraw Consent</span>
+        <span class="right-desc">Where processing is based on consent, withdraw that consent at any time without affecting prior processing.</span>
+      </div>
+    </div>
+
+    <p>To exercise any of these rights, please contact us at <a href="/cdn-cgi/l/email-protection#2b585e5b5b44595f6b59584f4305454e5f" style="color:var(--accent);"><span class="__cf_email__" data-cfemail="582b2d2828372a2c182a2b3c3076363d2c">[email&#160;protected]</span></a>. We will respond within 30 days (or within any shorter period required by applicable law).</p>
+  </section>
+
+  <!-- 8 -->
+  <section id="uk-gdpr">
+    <h2><span class="section-num">08</span> UK &amp; EU Residents</h2>
+    <p>If you are located in the United Kingdom or the European Economic Area, the following additional provisions apply.</p>
+
+    <p><strong>Data Controller</strong><br>
+    RSDH is the data controller for any personal information processed in connection with the App. You may contact us at <a href="/cdn-cgi/l/email-protection#bccfc9ccccd3cec8fccecfd8d492d2d9c8" style="color:var(--accent);"><span class="__cf_email__" data-cfemail="8efdfbfefee1fcfacefcfdeae6a0e0ebfa">[email&#160;protected]</span></a>.</p>
+
+    <p><strong>International Transfers</strong><br>
+    Your data stored via iCloud may be transferred to and processed in countries outside the UK or EEA by Apple Inc. Apple relies on Standard Contractual Clauses and other approved mechanisms to safeguard such transfers. Please refer to Apple's Privacy Policy for details.</p>
+
+    <p><strong>Right to Lodge a Complaint</strong><br>
+    If you are in the UK, you have the right to lodge a complaint with the <strong>Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk" style="color:var(--accent);">ico.org.uk</a>. If you are in the EEA, you may contact your local supervisory authority.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="australia">
+    <h2><span class="section-num">09</span> Australian Residents</h2>
+    <p>If you are located in Australia, the following additional provisions apply under the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles (APPs).</p>
+
+    <p><strong>Collection Notice</strong><br>
+    We collect sign-in information (where you use Sign in with Apple) for the sole purpose of providing App functionality. We do not collect sensitive information as defined under the Privacy Act.</p>
+
+    <p><strong>Access &amp; Correction</strong><br>
+    You may request access to, or correction of, any personal information we hold about you by contacting <a href="/cdn-cgi/l/email-protection#70030500001f020430020314185e1e1504" style="color:var(--accent);"><span class="__cf_email__" data-cfemail="50232520203f222410222334387e3e3524">[email&#160;protected]</span></a>. We will respond within a reasonable period, and at no charge for straightforward requests.</p>
+
+    <p><strong>Cross-Border Disclosure</strong><br>
+    Where your information is stored via iCloud, it may be held on Apple's servers located outside Australia. Before such disclosure, we take reasonable steps to ensure overseas recipients handle the information in a manner consistent with the APPs.</p>
+
+    <p><strong>Complaints</strong><br>
+    If you believe we have breached the Australian Privacy Principles, please contact us first so we may attempt to resolve your concern. If you remain unsatisfied, you may lodge a complaint with the <strong>Office of the Australian Information Commissioner (OAIC)</strong> at <a href="https://www.oaic.gov.au" style="color:var(--accent);">oaic.gov.au</a>.</p>
+  </section>
+
+  <!-- 10 -->
+  <section id="children">
+    <h2><span class="section-num">10</span> Children's Privacy</h2>
+    <p>The App is not directed at children under the age of 13 (or under 16 where required by applicable law). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us at <a href="/cdn-cgi/l/email-protection#a3d0d6d3d3ccd1d7e3d1d0c7cb8dcdc6d7" style="color:var(--accent);"><span class="__cf_email__" data-cfemail="2c5f595c5c435e586c5e5f484402424958">[email&#160;protected]</span></a> and we will take steps to delete such information promptly.</p>
+  </section>
+
+  <!-- 11 -->
+  <section id="changes">
+    <h2><span class="section-num">11</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in the App, our practices, or applicable law. When we do, we will revise the effective date at the top of this page. Where changes are material, we will provide notice within the App or via the App Store update notes.</p>
+    <p>We encourage you to review this Policy periodically. Your continued use of the App after any changes constitutes your acceptance of the updated Policy.</p>
+  </section>
+
+  <!-- 12 -->
+  <section id="contact">
+    <h2><span class="section-num">12</span> Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Po
